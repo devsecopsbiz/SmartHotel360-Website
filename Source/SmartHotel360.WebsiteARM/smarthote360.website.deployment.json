@@ -31,7 +31,6 @@
     "cosmosdb_name": "[concat('websitecosmosdb-',uniqueString(resourceGroup().id))]",
     "function_name": "[concat('websitefunction-',uniqueString(resourceGroup().id))]",
     "storage_name": "[concat('storage',uniqueString(resourceGroup().id))]",
-    "vision_name": "[concat('websitevisionapi-',uniqueString(resourceGroup().id))]",
     "website_name": "[concat('smarthotel360',uniqueString(resourceGroup().id))]",
     "serviceplan_name": "[concat('appserviceplan',uniqueString(resourceGroup().id))]",
     "signalr_name": "[concat('websitesignalr-',uniqueString(resourceGroup().id))]"
@@ -108,19 +107,6 @@
       "properties": {
         "accountType": "Standard_LRS"
       }
-    },
-    {
-      "type": "Microsoft.CognitiveServices/accounts",
-      "sku": {
-        "name": "F0"
-      },
-      "kind": "ComputerVision",
-      "name": "[variables('vision_name')]",
-      "apiVersion": "2016-02-01-preview",
-      "location": "[parameters('location')]",
-      "scale": null,
-      "properties": {},
-      "dependsOn": []
     },
     {
       "type": "Microsoft.Web/sites",

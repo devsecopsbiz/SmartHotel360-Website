@@ -24,26 +24,6 @@
       }
     },
     {
-      "type": "Microsoft.DocumentDB/databaseAccounts",
-      "kind": "GlobalDocumentDB",
-      "name": "[variables('cosmosdb_name')]",
-      "apiVersion": "2015-04-08",
-      "location": "[parameters('location')]",
-      "tags": {
-        "defaultExperience": "DocumentDB"
-      },
-      "scale": null,
-      "properties": {
-        "databaseAccountOfferType": "Standard",
-        "consistencyPolicy": {
-          "defaultConsistencyLevel": "Session",
-          "maxIntervalInSeconds": 5,
-          "maxStalenessPrefix": 100
-        },
-        "name": "[variables('cosmosdb_name')]"
-      }
-    },
-    {
       "type": "Microsoft.Web/sites",
       "kind": "functionapp",
       "name": "[variables('function_name')]",
